@@ -1,4 +1,5 @@
 import React, {useState, useEffect} from "react"
+import "../src/App.css"
 
 const apiKey = "d2d7fdd7-8469-46a6-be9c-d1c04ac4e2e4"
 const url = "https://api.thecatapi.com/v1/images/search"
@@ -35,10 +36,10 @@ function App() {
  //JSX
 
   return (
-    <div>
-      <h1>Welcome to my cat App</h1>
-      <img className= "img"src= {catUrl} alt= "catimage"/>
-      <button onClick= {getcats}>Get new random cat</button>
+    <div className="app">
+      <h1>The Great Catsby !</h1>
+      <img className="img" src= {catUrl} alt= "catimage"/>
+      <button className="button" onClick= {getcats}>Next cat purr-lease</button>
     </div>
   );
 }
