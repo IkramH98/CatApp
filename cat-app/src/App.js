@@ -39,7 +39,7 @@ function App() {
     <div className="app">
       <h1>The Great Catsby !</h1>
       <img className="img" src= {catUrl} alt= "catimage"/>
-      <button className="button" onClick= {getcats}>Next cat purr-lease</button>
+      <button className="button" onClick= {getcats}>Next cat purr-lease!</button>
     </div>
   );
 }
