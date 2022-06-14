@@ -1,7 +1,7 @@
 import React, {useState, useEffect} from "react"
 import "../App.css"
 
-const apiKey = "d2d7fdd7-8469-46a6-be9c-d1c04ac4e2e4"
+
 
 const URL = "https://api.thecatapi.com/v1/images/search";
 
@@ -68,15 +68,15 @@ export default function App() {
           const isFavorited = favs.includes(catUrl.id);
           return (
             <li>
-              <div>{isFavorited ? "Favorite" : "Not Favorite"}</div>
+              <div>{isFavorited ? "Add to Favorite" : "Not on Favorite List"}</div>
               <img
                 id={catUrl.id}
-                style={{ height: 200, width: 200, aspectRatio: 1 }}
                 alt={catUrl.id}
+                style={{ height: 200, width: 200, aspectRatio: 1 }}
                 src={catUrl.url}
               />
               <button className="button" type="button" onClick={() => toggleFavs(isFavorited)}>
-                {isFavorited ? "Unfavorite" : "Favorite"}
+                {isFavorited ? "Unfavorite" : "Add to Favorite"}
               </button>
             </li>
           );
